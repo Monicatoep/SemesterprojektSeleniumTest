@@ -9,7 +9,7 @@ namespace SemesterprojektSeleniumTest
     public class UnitTest1
     {
         static string DriverDirectory = "C:\\webDrivers\\chromedriver-win64";
-        static string URL = "file:///C:/Users/monic/Desktop/Semesterprojekt/SSFrontend/index.html";
+        static string URL = "http://127.0.0.1:5500/SSFrontend/index.html";
       
         public IWebDriver driver = new ChromeDriver();
     
