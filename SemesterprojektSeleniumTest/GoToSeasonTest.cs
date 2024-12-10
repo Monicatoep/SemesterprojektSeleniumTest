@@ -6,12 +6,11 @@ using SeleniumExtras.WaitHelpers;
 namespace SemesterprojektSeleniumTest
 {
     [TestClass]
-    public class UnitTest1
+    public class GoToSeasonTest
     {
-        static string DriverDirectory = "C:\\webDrivers\\chromedriver-win64";
         static string URL = "http://127.0.0.1:5500/SSFrontend/index.html";
       
-        public IWebDriver driver = new ChromeDriver();
+        public static IWebDriver driver = new ChromeDriver();
     
         [TestMethod]
         public void TestRightSeasonAndGoBack()
@@ -36,6 +35,13 @@ namespace SemesterprojektSeleniumTest
 
             IWebElement h1 = driver.FindElement(By.TagName("h1"));
             Assert.AreEqual("Velkommen til Seasonal Stories!", h1.Text);
+
+        }
+
+        [ClassCleanup]
+        public static void TearDown()
+        {
+            driver.Dispose();
         }
     }
 }
