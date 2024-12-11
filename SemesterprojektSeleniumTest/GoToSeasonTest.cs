@@ -8,7 +8,7 @@ namespace SemesterprojektSeleniumTest
     [TestClass]
     public class GoToSeasonTest
     {
-        static string URL = "http://127.0.0.1:5500/SSFrontend/index.html";
+        static string URL = "http://seasonalstory-csgyagc7gzfkdgf0.northeurope-01.azurewebsites.net";
       
         public static IWebDriver driver = new ChromeDriver();
     
