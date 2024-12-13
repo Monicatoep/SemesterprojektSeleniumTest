@@ -38,10 +38,6 @@ namespace SemesterprojektSeleniumTest
             IWebElement radioButton = _driver.FindElement(By.Id("temp-1"));
             radioButton.Click();
 
-            //string projectDirectory =  "SemesterprojektSeleniumTest\SemesterprojektSeleniumTest\TestPhotos\TestBillede.jpg"
-            //string filePath = Path.Combine(projectDirectory, @"TestPhotos\TestBillede.jpg");
-            //filePath = Path.GetFullPath(filePath); // Ensure it's an absolute path
-            // Find roden af projektet (to niveauer op fra bin/Debug)
             string projectDirectory = Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName;
 
             // Find filstien i en mappe inkluderet i din solution (TestPhotos i projektroden)
@@ -54,11 +50,6 @@ namespace SemesterprojektSeleniumTest
 
             IWebElement uploadButton = _driver.FindElement(By.Id("uploadButton"));
             uploadButton.Click();
-
-            //WebDriverWait _wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
-            //IWebElement addMessage = _wait.Until(ExpectedConditions.ElementIsVisible(By.Id("outputMessage")));
-            //string output = addMessage.Text;
-            //Assert.AreEqual<string>("Response: 201 Created", output);
 
             WebDriverWait _wait = new WebDriverWait(_driver, TimeSpan.FromSeconds(10));
             IWebElement addMessage = _wait.Until(ExpectedConditions.ElementIsVisible(By.Id("popUpMessage")));
